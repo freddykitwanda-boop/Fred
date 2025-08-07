@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige
+}
+
+.hero {
+  background-image: url("stick.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 360px;
+  height: 900px;
+  position: relative;
+  color: greenyellow;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* fond noir transparent */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.helpwell {
+  padding: 20px
+}
+a {
+  text-decoration: none;
+  color: blueviolet
+}
+.container {
+  width: 100%;
+  display: flex;
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between
+}
+.liens {
+  padding: 20px;
+  display: grid;
+  
+}
+
+@media(max-width: 360px){
+  body {
+    
+  }
+  .hero {
+    height: 480px;
+  }
+}

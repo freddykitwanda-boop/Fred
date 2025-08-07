@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height:100%;
+  width:100wh;
+  align-items:center;
+  justify-content:center;
+}
+.1 {
+  position: fixed
+}
+h1 {
+  color: burlywood;
+  font-size: 35px
+}
+.hero {
+  background-image: url("robot.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 1080px;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* fond noir transparent */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+a {
+  font-size: 20px;
+  color: blue;
+  text-decoration: none;
+  list-style: none;
+}
+h1 {
+  z-index: 1000;
+}
+.form {
+  display: flex;
+  justify-content: space-around;
+  boreder: 2px solid black;
+  
+}
+.form div {
+  font-size: 35px;
+  background-color: wheat;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+}
+img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 20px
+}
+.container {
+  margin: 40px;
+}
+h5 {
+  font-size: 17px;
+}
+footer {
+  padding: 0 40;
+  background-color: bisque
+}
+.footer {
+  align-items: center;
+  justify-content: center;
+  padding: 1px 1px 1px 45px;
+  color: rebeccapurple
+  
+}
+.liens {
+  padding: 20px
+}
+
+
+
+@media(max-width: 360px){
+  body {
+  }
+  .hero {
+    height: 350px;
+  }
+  img {
+    
+  }
+}

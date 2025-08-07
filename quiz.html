@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz simple</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  
+   <title>Quiz interactif</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    header, footer {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .quiz {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+    }
+    #timer {
+      font-weight: bold;
+      font-size: 18px;
+      color: red;
+    }
+    #finalScore {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+
+
+  <header>
+    <h1>Bienvenue sur le Quiz Interactif</h1>
+    <p>Ce quiz contient 30 questions pour tester vos connaissances générales.</p>
+    <p>Répondez attentivement à chaque question. À la fin, vous verrez votre score final.</p>
+    <p>Bonne chance !</p>
+    <div id="timer">Temps restant : 05:00</div>
+  </header>
+  
+  
+  
+ <div class="quiz-intro">
+  <h1>Bienvenue sur notre Quiz de Culture Générale</h1>
+  <p>Ce quiz contient 30 questions pour tester vos connaissances dans divers domaines tels que la géographie, l’histoire, la science, et plus encore.</p>
+  <p>Vous disposez de 5 minutes pour répondre à toutes les questions. Lisez bien chaque question, choisissez la bonne réponse, puis cliquez sur "Valider".</p>
+  <p>À la fin, cliquez sur "Vérifier toutes les réponses" pour voir votre score total.</p>
+  <p>Bonne chance ! 🎯</p>
+</div>
+  
+  
+    <!-- Question 1 -->
+  <div class="quiz">
+    <h2>1. Quel est le plus grand océan du monde ?</h2>
+    <form id="quiz1">
+      <input type="radio" name="q1" value="a"> Atlantique<br>
+      <input type="radio" name="q1" value="b"> Indien<br>
+      <input type="radio" name="q1" value="c"> Pacifique<br>
+      <input type="radio" name="q1" value="d"> Arctique<br>
+      <button type="button" onclick="checkAnswer('quiz1','q1','c','result1')">Valider</button>
+    </form>
+    <p id="result1"></p>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="quiz">
+    <h2>2. Combien y a-t-il de continents ?</h2>
+    <form id="quiz2">
+      <input type="radio" name="q2" value="a"> 5<br>
+      <input type="radio" name="q2" value="b"> 6<br>
+      <input type="radio" name="q2" value="c"> 7<br>
+      <input type="radio" name="q2" value="d"> 8<br>
+      <button type="button" onclick="checkAnswer('quiz2','q2','c','result2')">Valider</button>
+    </form>
+    <p id="result2"></p>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="quiz">
+    <h2>3. Qui a inventé la lumière électrique ?</h2>
+    <form id="quiz3">
+      <input type="radio" name="q3" value="a"> Thomas Edison<br>
+      <input type="radio" name="q3" value="b"> Isaac Newton<br>
+      <input type="radio" name="q3" value="c"> Albert Einstein<br>
+      <input type="radio" name="q3" value="d"> Nikola Tesla<br>
+      <button type="button" onclick="checkAnswer('quiz3','q3','a','result3')">Valider</button>
+    </form>
+    <p id="result3"></p>
+  </div>
+
+<!-- Question 4 -->
+<div class="quiz">
+  <h2>4. Quelle est la capitale de la France ?</h2>
+  <form id="quiz4">
+    <input type="radio" name="q4" value="a"> Lyon<br>
+    <input type="radio" name="q4" value="b"> Marseille<br>
+    <input type="radio" name="q4" value="c"> Paris<br>
+    <input type="radio" name="q4" value="d"> Bordeaux<br>
+    <button type="button" onclick="checkAnswer('quiz4','q4','c','result4')">Valider</button>
+  </form>
+  <p id="result4"></p>
+</div>
+  
+  
+<!-- Question 5 -->
+<div class="quiz">
+  <h2>5. Quel est l’élément chimique représenté par le symbole O ?</h2>
+  <form id="quiz5">
+    <input type="radio" name="q5" value="a"> Or<br>
+    <input type="radio" name="q5" value="b"> Oxygène<br>
+    <input type="radio" name="q5" value="c"> Osmium<br>
+    <input type="radio" name="q5" value="d"> Ozone<br>
+    <button type="button" onclick="checkAnswer('quiz5','q5','b','result5')">Valider</button>
+  </form>
+  <p id="result5"></p>
+</div>
+
+<!-- Question 6 -->
+<div class="quiz">
+  <h2>6. Combien de jours y a-t-il dans une année bissextile ?</h2>
+  <form id="quiz6">
+    <input type="radio" name="q6" value="a"> 365<br>
+    <input type="radio" name="q6" value="b"> 366<br>
+    <input type="radio" name="q6" value="c"> 364<br>
+    <input type="radio" name="q6" value="d"> 367<br>
+    <button type="button" onclick="checkAnswer('quiz6','q6','b','result6')">Valider</button>
+  </form>
+  <p id="result6"></p>
+</div>
+
+<!-- Question 7 -->
+<div class="quiz">
+  <h2>7. Quelle planète est la plus proche du Soleil ?</h2>
+  <form id="quiz7">
+    <input type="radio" name="q7" value="a"> Vénus<br>
+    <input type="radio" name="q7" value="b"> Mars<br>
+    <input type="radio" name="q7" value="c"> Terre<br>
+    <input type="radio" name="q7" value="d"> Mercure<br>
+    <button type="button" onclick="checkAnswer('quiz7','q7','d','result7')">Valider</button>
+  </form>
+  <p id="result7"></p>
+</div>
+
+<!-- Question 8 -->
+<div class="quiz">
+  <h2>8. En quelle année a eu lieu la Révolution française ?</h2>
+  <form id="quiz8">
+    <input type="radio" name="q8" value="a"> 1789<br>
+    <input type="radio" name="q8" value="b"> 1776<br>
+    <input type="radio" name="q8" value="c"> 1804<br>
+    <input type="radio" name="q8" value="d"> 1812<br>
+    <button type="button" onclick="checkAnswer('quiz8','q8','a','result8')">Valider</button>
+  </form>
+  <p id="result8"></p>
+</div>
+
+<!-- Question 9 -->
+<div class="quiz">
+  <h2>9. Quelle langue est parlée au Brésil ?</h2>
+  <form id="quiz9">
+    <input type="radio" name="q9" value="a"> Espagnol<br>
+    <input type="radio" name="q9" value="b"> Portugais<br>
+    <input type="radio" name="q9" value="c"> Français<br>
+    <input type="radio" name="q9" value="d"> Anglais<br>
+    <button type="button" onclick="checkAnswer('quiz9','q9','b','result9')">Valider</button>
+  </form>
+  <p id="result9"></p>
+</div>
+
+<!-- Question 10 -->
+<div class="quiz">
+  <h2>10. Quelle est la plus grande planète du système solaire ?</h2>
+  <form id="quiz10">
+    <input type="radio" name="q10" value="a"> Terre<br>
+    <input type="radio" name="q10" value="b"> Saturne<br>
+    <input type="radio" name="q10" value="c"> Uranus<br>
+    <input type="radio" name="q10" value="d"> Jupiter<br>
+    <button type="button" onclick="checkAnswer('quiz10','q10','d','result10')">Valider</button>
+  </form>
+  <p id="result10"></p>
+</div>
+  
+<!-- Question 11 -->
+<div class="quiz">
+  <h2>11. Quelle est la capitale de l'Allemagne ?</h2>
+  <form id="quiz11">
+    <input type="radio" name="q11" value="a"> Berlin<br>
+    <input type="radio" name="q11" value="b"> Munich<br>
+    <input type="radio" name="q11" value="c"> Francfort<br>
+    <input type="radio" name="q11" value="d"> Hambourg<br>
+    <button type="button" onclick="checkAnswer('quiz11','q11','a','result11')">Valider</button>
+  </form>
+  <p id="result11"></p>
+</div>
+
+<!-- Question 12 -->
+<div class="quiz">
+  <h2>12. Quel est le métal utilisé pour fabriquer les fils électriques ?</h2>
+  <form id="quiz12">
+    <input type="radio" name="q12" value="a"> Aluminium<br>
+    <input type="radio" name="q12" value="b"> Fer<br>
+    <input type="radio" name="q12" value="c"> Cuivre<br>
+    <input type="radio" name="q12" value="d"> Zinc<br>
+    <button type="button" onclick="checkAnswer('quiz12','q12','c','result12')">Valider</button>
+  </form>
+  <p id="result12"></p>
+</div>
+
+<!-- Question 13 -->
+<div class="quiz">
+  <h2>13. Quelle est la langue officielle de l’Égypte ?</h2>
+  <form id="quiz13">
+    <input type="radio" name="q13" value="a"> Français<br>
+    <input type="radio" name="q13" value="b"> Arabe<br>
+    <input type="radio" name="q13" value="c"> Anglais<br>
+    <input type="radio" name="q13" value="d"> Grec<br>
+    <button type="button" onclick="checkAnswer('quiz13','q13','b','result13')">Valider</button>
+  </form>
+  <p id="result13"></p>
+</div>
+
+<!-- Question 14 -->
+<div class="quiz">
+  <h2>14. Combien de zéros y a-t-il dans un milliard ?</h2>
+  <form id="quiz14">
+    <input type="radio" name="q14" value="a"> 6<br>
+    <input type="radio" name="q14" value="b"> 7<br>
+    <input type="radio" name="q14" value="c"> 8<br>
+    <input type="radio" name="q14" value="d"> 9<br>
+    <button type="button" onclick="checkAnswer('quiz14','q14','d','result14')">Valider</button>
+  </form>
+  <p id="result14"></p>
+</div>
+
+<!-- Question 15 -->
+<div class="quiz">
+  <h2>15. Qui a écrit Les Misérables ?</h2>
+  <form id="quiz15">
+    <input type="radio" name="q15" value="a"> Victor Hugo<br>
+    <input type="radio" name="q15" value="b"> Molière<br>
+    <input type="radio" name="q15" value="c"> Voltaire<br>
+    <input type="radio" name="q15" value="d"> Balzac<br>
+    <button type="button" onclick="checkAnswer('quiz15','q15','a','result15')">Valider</button>
+  </form>
+  <p id="result15"></p>
+</div>
+
+<!-- Question 16 -->
+<div class="quiz">
+  <h2>16. Quel est l’animal terrestre le plus rapide ?</h2>
+  <form id="quiz16">
+    <input type="radio" name="q16" value="a"> Lion<br>
+    <input type="radio" name="q16" value="b"> Léopard<br>
+    <input type="radio" name="q16" value="c"> Guépard<br>
+    <input type="radio" name="q16" value="d"> Antilope<br>
+    <button type="button" onclick="checkAnswer('quiz16','q16','c','result16')">Valider</button>
+  </form>
+  <p id="result16"></p>
+</div>
+
+<!-- Question 17 -->
+<div class="quiz">
+  <h2>17. Quel pays est surnommé « le pays du Soleil Levant » ?</h2>
+  <form id="quiz17">
+    <input type="radio" name="q17" value="a"> Chine<br>
+    <input type="radio" name="q17" value="b"> Thaïlande<br>
+    <input type="radio" name="q17" value="c"> Japon<br>
+    <input type="radio" name="q17" value="d"> Corée du Sud<br>
+    <button type="button" onclick="checkAnswer('quiz17','q17','c','result17')">Valider</button>
+  </form>
+  <p id="result17"></p>
+</div>
+
+<!-- Question 18 -->
+<div class="quiz">
+  <h2>18. Quel est l’auteur de la théorie de la relativité ?</h2>
+  <form id="quiz18">
+    <input type="radio" name="q18" value="a"> Newton<br>
+    <input type="radio" name="q18" value="b"> Einstein<br>
+    <input type="radio" name="q18" value="c"> Galilée<br>
+    <input type="radio" name="q18" value="d"> Kepler<br>
+    <button type="button" onclick="checkAnswer('quiz18','q18','b','result18')">Valider</button>
+  </form>
+  <p id="result18"></p>
+</div>
+
+<!-- Question 19 -->
+<div class="quiz">
+  <h2>19. Quelle est la devise de la France ?</h2>
+  <form id="quiz19">
+    <input type="radio" name="q19" value="a"> Liberté, Unité, Patrie<br>
+    <input type="radio" name="q19" value="b"> Liberté, Égalité, Fraternité<br>
+    <input type="radio" name="q19" value="c"> Union, Travail, Progrès<br>
+    <input type="radio" name="q19" value="d"> Paix, Justice, Force<br>
+    <button type="button" onclick="checkAnswer('quiz19','q19','b','result19')">Valider</button>
+  </form>
+  <p id="result19"></p>
+</div>
+
+<!-- Question 20 -->
+<div class="quiz">
+  <h2>20. Combien de couleurs y a-t-il dans un arc-en-ciel ?</h2>
+  <form id="quiz20">
+    <input type="radio" name="q20" value="a"> 5<br>
+    <input type="radio" name="q20" value="b"> 6<br>
+    <input type="radio" name="q20" value="c"> 7<br>
+    <input type="radio" name="q20" value="d"> 8<br>
+    <button type="button" onclick="checkAnswer('quiz20','q20','c','result20')">Valider</button>
+  </form>
+  <p id="result20"></p>
+</div>
+  
+<!-- Question 21 -->
+<div class="quiz">
+  <h2>21. Quelle est la planète la plus proche du Soleil ?</h2>
+  <form id="quiz21">
+    <input type="radio" name="q21" value="a"> Vénus<br>
+    <input type="radio" name="q21" value="b"> Terre<br>
+    <input type="radio" name="q21" value="c"> Mercure<br>
+    <input type="radio" name="q21" value="d"> Mars<br>
+    <button type="button" onclick="checkAnswer('quiz21','q21','c','result21')">Valider</button>
+  </form>
+  <p id="result21"></p>
+</div>
+
+<!-- Question 22 -->
+<div class="quiz">
+  <h2>22. Quelle est la capitale du Canada ?</h2>
+  <form id="quiz22">
+    <input type="radio" name="q22" value="a"> Ottawa<br>
+    <input type="radio" name="q22" value="b"> Toronto<br>
+    <input type="radio" name="q22" value="c"> Montréal<br>
+    <input type="radio" name="q22" value="d"> Vancouver<br>
+    <button type="button" onclick="checkAnswer('quiz22','q22','a','result22')">Valider</button>
+  </form>
+  <p id="result22"></p>
+</div>
+
+<!-- Question 23 -->
+<div class="quiz">
+  <h2>23. Quelle est la monnaie du Japon ?</h2>
+  <form id="quiz23">
+    <input type="radio" name="q23" value="a"> Yuan<br>
+    <input type="radio" name="q23" value="b"> Yen<br>
+    <input type="radio" name="q23" value="c"> Won<br>
+    <input type="radio" name="q23" value="d"> Ringgit<br>
+    <button type="button" onclick="checkAnswer('quiz23','q23','b','result23')">Valider</button>
+  </form>
+  <p id="result23"></p>
+</div>
+
+<!-- Question 24 -->
+<div class="quiz">
+  <h2>24. Quel est le plus long fleuve du monde ?</h2>
+  <form id="quiz24">
+    <input type="radio" name="q24" value="a"> Nil<br>
+    <input type="radio" name="q24" value="b"> Amazone<br>
+    <input type="radio" name="q24" value="c"> Yangtsé<br>
+    <input type="radio" name="q24" value="d"> Mississipi<br>
+    <button type="button" onclick="checkAnswer('quiz24','q24','a','result24')">Valider</button>
+  </form>
+  <p id="result24"></p>
+</div>
+
+<!-- Question 25 -->
+<div class="quiz">
+  <h2>25. Combien de dents a un adulte en moyenne ?</h2>
+  <form id="quiz25">
+    <input type="radio" name="q25" value="a"> 28<br>
+    <input type="radio" name="q25" value="b"> 30<br>
+    <input type="radio" name="q25" value="c"> 32<br>
+    <input type="radio" name="q25" value="d"> 34<br>
+    <button type="button" onclick="checkAnswer('quiz25','q25','c','result25')">Valider</button>
+  </form>
+  <p id="result25"></p>
+</div>
+
+<!-- Question 26 -->
+<div class="quiz">
+  <h2>26. Qui a peint la Joconde ?</h2>
+  <form id="quiz26">
+    <input type="radio" name="q26" value="a"> Picasso<br>
+    <input type="radio" name="q26" value="b"> Léonard de Vinci<br>
+    <input type="radio" name="q26" value="c"> Michel-Ange<br>
+    <input type="radio" name="q26" value="d"> Van Gogh<br>
+    <button type="button" onclick="checkAnswer('quiz26','q26','b','result26')">Valider</button>
+  </form>
+  <p id="result26"></p>
+</div>
+
+<!-- Question 27 -->
+<div class="quiz">
+  <h2>27. Quelle est la plus grande île du monde ?</h2>
+  <form id="quiz27">
+    <input type="radio" name="q27" value="a"> Madagascar<br>
+    <input type="radio" name="q27" value="b"> Groenland<br>
+    <input type="radio" name="q27" value="c"> Australie<br>
+    <input type="radio" name="q27" value="d"> Islande<br>
+    <button type="button" onclick="checkAnswer('quiz27','q27','b','result27')">Valider</button>
+  </form>
+  <p id="result27"></p>
+</div>
+
+<!-- Question 28 -->
+<div class="quiz">
+  <h2>28. Qui a découvert la pénicilline ?</h2>
+  <form id="quiz28">
+    <input type="radio" name="q28" value="a"> Pasteur<br>
+    <input type="radio" name="q28" value="b"> Alexander Fleming<br>
+    <input type="radio" name="q28" value="c"> Darwin<br>
+    <input type="radio" name="q28" value="d"> Newton<br>
+    <button type="button" onclick="checkAnswer('quiz28','q28','b','result28')">Valider</button>
+  </form>
+  <p id="result28"></p>
+</div>
+
+<!-- Question 29 -->
+<div class="quiz">
+  <h2>29. Quel est l'élément chimique O ?</h2>
+  <form id="quiz29">
+    <input type="radio" name="q29" value="a"> Or<br>
+    <input type="radio" name="q29" value="b"> Oxygène<br>
+    <input type="radio" name="q29" value="c"> Azote<br>
+    <input type="radio" name="q29" value="d"> Argent<br>
+    <button type="button" onclick="checkAnswer('quiz29','q29','b','result29')">Valider</button>
+  </form>
+  <p id="result29"></p>
+</div>
+
+<!-- Question 30 -->
+<div class="quiz">
+  <h2>30. Quel pays a gagné la Coupe du Monde 2018 ?</h2>
+  <form id="quiz30">
+    <input type="radio" name="q30" value="a"> Allemagne<br>
+    <input type="radio" name="q30" value="b"> Argentine<br>
+    <input type="radio" name="q30" value="c"> France<br>
+    <input type="radio" name="q30" value="d"> Brésil<br>
+    <button type="button" onclick="checkAnswer('quiz30','q30','c','result30')">Valider</button>
+  </form>
+  <p id="result30"></p>
+</div>
+
+  
+
+<!-- Bouton pour vérifier tout -->
+<div style="text-align: center; margin: 30px;">
+  <button id="checkAllBtn" onclick="checkAllAnswers()">Vérifier toutes les réponses</button>
+</div>
+<p id="finalScore" style="text-align:center; font-size: 20px; font-weight: bold; margin-top: 20px;"></p>
+
+  <div id="timer">
+    <p id="timer" style="font-weight:bold; font-size:18px; color:darkblue;">temps</p>
+</div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
